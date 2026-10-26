@@ -1,0 +1,14 @@
+# Stack para Portainer (Stacks > Add stack > Upload o Repository).
+# Antes de desplegar:
+#   1. Creá la carpeta /opt/setlab/temas en el servidor y subí ahí tus dos temas.
+#   2. Cambiá los nombres de archivo en "command" por los tuyos.
+# El contenedor corre una vez, genera /opt/setlab/temas/salida/transicion.mp3 y se apaga.
+services:
+  fase0:
+    build: .
+    image: setlab-fase0
+    volumes:
+      - /opt/setlab/temas:/temas
+    command: ["temaA.wav", "temaB.wav", "--estilo", "bajos", "--compases", "32"]
+    mem_limit: 3g
+    restart: "no"

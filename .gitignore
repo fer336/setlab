@@ -1,0 +1,21 @@
+# Audio: los temas son del usuario, nunca al repo
+*.mp3
+*.wav
+*.flac
+*.aiff
+temas/
+salida/
+salida_*/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secretos
+.env
+
+# Sistema
+.DS_Store
+node_modules/

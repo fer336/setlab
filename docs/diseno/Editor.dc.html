@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Editor del set</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0E10}
+a{color:#ECECE8}a:hover{color:#FFFFFF}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #0D0E10; color: #ECECE8; font-family: Archivo, system-ui, sans-serif; font-size: 14px">
+
+<header style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 10px 24px; border-bottom: 1px solid #2B2F35; background: #121316">
+<div style="display: flex; align-items: center; gap: 10px">
+<svg width="30" height="20" viewBox="0 0 30 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="#F0A23A" stroke-width="2"></circle><circle cx="20" cy="10" r="8" fill="none" stroke="#3FC1D6" stroke-width="2"></circle></svg>
+<span style="font-weight: 700; letter-spacing: 0.12em; font-size: 15px">SET/LAB</span>
+</div>
+<nav aria-label="Secciones" style="display: flex; gap: 4px; flex-wrap: wrap">
+<a href="Biblioteca.dc.html" style="padding: 12px 16px; border-radius: 6px; text-decoration: none; color: #A2A8B0; font-weight: 500">Biblioteca</a>
+<a href="Editor.dc.html" aria-current="page" style="padding: 12px 16px; border-radius: 6px; text-decoration: none; color: #ECECE8; background: #1D2024; font-weight: 600">Editor</a>
+<a href="Main.dc.html" style="padding: 12px 16px; border-radius: 6px; text-decoration: none; color: #A2A8B0; font-weight: 500">Reproductor</a>
+</nav>
+<div style="flex: 1"></div>
+<span style="font-size: 13px; color: #A2A8B0">Set 01 · Hipnótico a industrial · 1:58:20</span>
+</header>
+
+<main style="padding: 20px 24px 24px; display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-start">
+
+<aside aria-label="Prompt y plan" style="flex: 1 1 280px; min-width: 0; max-width: 340px; display: flex; flex-direction: column; gap: 14px">
+<div style="border: 1px solid #2B2F35; border-radius: 10px; background: #16181B; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+<label for="prompt" style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em">PROMPT</label>
+<textarea id="prompt" rows="5" style="resize: vertical; border: 1px solid #2B2F35; border-radius: 6px; background: #0D0E10; color: #ECECE8; font: inherit; font-size: 13px; line-height: 1.5; padding: 10px">Arranque hipnótico y oscuro, subida lenta, pico industrial a los 70 minutos, cierre melódico.</textarea>
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<span style="font-size: 12px; padding: 5px 10px; border-radius: 99px; background: #ECECE8; color: #0D0E10; font-weight: 600">Techno</span>
+<span style="font-size: 12px; padding: 5px 10px; border-radius: 99px; border: 1px solid #2B2F35; color: #A2A8B0">Dark techno</span>
+<span style="font-size: 12px; padding: 5px 10px; border-radius: 99px; border: 1px solid #2B2F35; color: #A2A8B0">Minimal</span>
+<span style="font-size: 12px; padding: 5px 10px; border-radius: 99px; border: 1px solid #2B2F35; color: #A2A8B0">Tech house</span>
+</div>
+<button type="button" style="min-height: 44px; border-radius: 6px; border: 1px solid #2B2F35; background: #1D2024; color: #ECECE8; font: inherit; font-weight: 600; cursor: pointer">Regenerar plan con IA</button>
+</div>
+
+<div style="border: 1px solid #2B2F35; border-radius: 10px; background: #16181B; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.14em">HISTORIA DEL SET</p>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+<li style="display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 8px; font-size: 13px"><span style="font-family: 'JetBrains Mono', monospace; color: #A2A8B0">0:00–0:28</span><span><strong>Intro</strong> · hipnótico, 126 BPM, temas 1–3</span></li>
+<li style="display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 8px; font-size: 13px"><span style="font-family: 'JetBrains Mono', monospace; color: #A2A8B0">0:28–1:00</span><span><strong>Subida</strong> · más percusión, 128–130 BPM</span></li>
+<li style="display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 8px; font-size: 13px"><span style="font-family: 'JetBrains Mono', monospace; color: #A2A8B0">1:00–1:28</span><span><strong>Pico</strong> · industrial, 132–134 BPM</span></li>
+<li style="display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 8px; font-size: 13px"><span style="font-family: 'JetBrains Mono', monospace; color: #A2A8B0">1:28–1:58</span><span><strong>Cierre</strong> · melódico, baja a 128 BPM</span></li>
+</ol>
+</div>
+</aside>
+
+<section aria-label="Línea de tiempo" style="flex: 999 1 560px; min-width: 0; border: 1px solid #2B2F35; border-radius: 10px; background: #16181B; overflow: hidden">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 14px; border-bottom: 1px solid #2B2F35">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em">LÍNEA DE TIEMPO · 0:40 a 1:20</span>
+<div style="display: flex; gap: 6px">
+<button type="button" aria-label="Alejar" style="width: 44px; height: 36px; border-radius: 6px; border: 1px solid #2B2F35; background: #1D2024; color: #ECECE8; font: inherit; font-size: 18px; cursor: pointer">−</button>
+<button type="button" aria-label="Acercar" style="width: 44px; height: 36px; border-radius: 6px; border: 1px solid #2B2F35; background: #1D2024; color: #ECECE8; font: inherit; font-size: 18px; cursor: pointer">+</button>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr)">
+<div style="border-right: 1px solid #2B2F35"></div>
+<div style="position: relative; height: 26px; border-bottom: 1px solid #2B2F35">
+<sc-for list="{{ticks}}" as="t" hint-placeholder-count="9"><span style="position: absolute; top: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A2A8B0; transform: translateX(-50%); left: {{t.left}}%">{{t.label}}</span></sc-for>
+</div>
+
+<div style="display: flex; align-items: center; padding: 0 12px; height: 72px; border-right: 1px solid #2B2F35; border-bottom: 1px solid #22252A; font-size: 12px; font-weight: 700; color: #F0A23A">Deck A</div>
+<div style="position: relative; height: 72px; border-bottom: 1px solid #22252A; background-image: repeating-linear-gradient(90deg, #1F2226 0, #1F2226 1px, transparent 1px, transparent 12.5%)">
+<sc-for list="{{laneA}}" as="b" hint-placeholder-count="2">
+<div style="position: absolute; top: 8px; height: 56px; border-radius: 6px; box-sizing: border-box; overflow: hidden; display: flex; flex-direction: column; left: {{b.left}}%; width: {{b.w}}%; background: #2A2116; border: 1px solid #4A3720">
+<span style="padding: 6px 8px 0; font-size: 12px; font-weight: 600; color: #F0A23A; white-space: nowrap">{{b.name}} · {{b.bpm}} · {{b.key}}</span>
+<div style="margin-top: auto; display: flex; height: 6px"><sc-for list="{{b.segs}}" as="s" hint-placeholder-count="6"><div style="height: 6px; width: {{s.w}}%; background: {{s.c}}"></div></sc-for></div>
+</div>
+</sc-for>
+</div>
+
+<div style="display: flex; align-items: center; padding: 0 12px; height: 72px; border-right: 1px solid #2B2F35; border-bottom: 1px solid #22252A; font-size: 12px; font-weight: 700; color: #3FC1D6">Deck B</div>
+<div style="position: relative; height: 72px; border-bottom: 1px solid #22252A; background-image: repeating-linear-gradient(90deg, #1F2226 0, #1F2226 1px, transparent 1px, transparent 12.5%)">
+<sc-for list="{{laneB}}" as="b" hint-placeholder-count="3">
+<div style="position: absolute; top: 8px; height: 56px; border-radius: 6px; box-sizing: border-box; overflow: hidden; display: flex; flex-direction: column; left: {{b.left}}%; width: {{b.w}}%; background: #11272B; border: 1px solid #1F4A52">
+<span style="padding: 6px 8px 0; font-size: 12px; font-weight: 600; color: #3FC1D6; white-space: nowrap">{{b.name}} · {{b.bpm}} · {{b.key}}</span>
+<div style="margin-top: auto; display: flex; height: 6px"><sc-for list="{{b.segs}}" as="s" hint-placeholder-count="6"><div style="height: 6px; width: {{s.w}}%; background: {{s.c}}"></div></sc-for></div>
+</div>
+</sc-for>
+</div>
+
+<div style="display: flex; align-items: center; padding: 0 12px; height: 34px; border-right: 1px solid #2B2F35; border-bottom: 1px solid #22252A; font-size: 11.5px; color: #A2A8B0">Transiciones</div>
+<div style="position: relative; height: 34px; border-bottom: 1px solid #22252A">
+<sc-for list="{{trans}}" as="t" hint-placeholder-count="4"><div style="position: absolute; top: 7px; height: 20px; min-width: 18px; border-radius: 4px; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; line-height: 18px; text-align: center; left: {{t.left}}%; width: {{t.w}}%; background: {{t.bg}}; color: {{t.fg}}; border: 1px solid {{t.bd}}">{{t.label}}</div></sc-for>
+</div>
+
+<sc-for list="{{autos}}" as="a" hint-placeholder-count="3">
+<div style="display: flex; align-items: center; padding: 0 12px; height: 46px; border-right: 1px solid #2B2F35; border-bottom: 1px solid #22252A; font-size: 11.5px; color: #A2A8B0">{{a.label}}</div>
+<div style="height: 46px; border-bottom: 1px solid #22252A">
+<svg viewBox="0 0 1000 40" preserveAspectRatio="none" style="display: block; width: 100%; height: 46px" aria-hidden="true"><polyline points="{{a.pts}}" fill="none" stroke="{{a.c}}" stroke-width="2" vector-effect="non-scaling-stroke"></polyline></svg>
+</div>
+</sc-for>
+</div>
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap; padding: 12px 14px; font-size: 11.5px; color: #A2A8B0">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 6px; background: #5C6168"></span>Intro / outro</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 6px; background: #8E7CC3"></span>Subida</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 6px; background: #ECECE8"></span>Drop</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 6px; background: #3A3E45"></span>Break</span>
+</div>
+</section>
+
+<aside aria-label="Inspector de transición" style="flex: 1 1 280px; min-width: 0; max-width: 360px; border: 1px solid #2B2F35; border-radius: 10px; background: #16181B; padding: 16px; display: flex; flex-direction: column; gap: 16px">
+<div>
+<p style="margin: 0 0 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: #A2A8B0">TRANSICIÓN SELECCIONADA</p>
+<p style="margin: 0; font-size: 20px; font-weight: 700"><span style="color: #F0A23A">Track 06</span> → <span style="color: #3FC1D6">Track 07</span></p>
+<p style="margin: 6px 0 0; font-size: 13px; color: #A2A8B0">10A → 11A · tonos vecinos, compatible · 130 BPM</p>
+</div>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px">
+<legend style="font-size: 12px; font-weight: 600; margin-bottom: 6px">Tipo de transición</legend>
+<sc-for list="{{types}}" as="t" hint-placeholder-count="4">
+<button type="button" onClick="{{t.pick}}" style="min-height: 44px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; padding: 8px 12px; border-radius: 6px; text-align: left; font: inherit; cursor: pointer; background: {{t.bg}}; border: 1px solid {{t.bd}}; color: #ECECE8">
+<span style="font-size: 13px; font-weight: 600">{{t.name}}</span>
+<span style="font-size: 11.5px; color: #A2A8B0">{{t.desc}}</span>
+</button>
+</sc-for>
+</fieldset>
+
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="font-size: 12px; font-weight: 600; margin-bottom: 8px">Largo</legend>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid #2B2F35; border-radius: 6px; overflow: hidden">
+<sc-for list="{{lengths}}" as="l" hint-placeholder-count="3"><button type="button" onClick="{{l.pick}}" style="min-height: 44px; border: 0; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; background: {{l.bg}}; color: {{l.fg}}">{{l.label}}</button></sc-for>
+</div>
+</fieldset>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; font-size: 12.5px">
+<div style="border: 1px solid #2B2F35; border-radius: 6px; padding: 8px 10px"><p style="margin: 0; color: #A2A8B0; font-size: 11px">SALE A</p><p style="margin: 2px 0 0; font-weight: 600">Outro · compás 161</p></div>
+<div style="border: 1px solid #2B2F35; border-radius: 6px; padding: 8px 10px"><p style="margin: 0; color: #A2A8B0; font-size: 11px">ENTRA B</p><p style="margin: 2px 0 0; font-weight: 600">Intro · compás 1</p></div>
+</div>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px">
+<legend style="font-size: 12px; font-weight: 600; margin-bottom: 6px">Efectos</legend>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 36px; font-size: 13px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #F0A23A">Filtro pasa-altos en A</label>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 36px; font-size: 13px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #F0A23A">Reverb en la salida de A</label>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 36px; font-size: 13px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #3FC1D6">Riser antes de la entrada de B</label>
+</fieldset>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<button type="button" style="min-height: 44px; border-radius: 6px; border: 0; background: #ECECE8; color: #0D0E10; font: inherit; font-weight: 700; cursor: pointer">Escuchar esta transición</button>
+<button type="button" style="min-height: 44px; border-radius: 6px; border: 1px solid #2B2F35; background: transparent; color: #ECECE8; font: inherit; font-weight: 600; cursor: pointer">Volver a la sugerencia de la IA</button>
+</div>
+</aside>
+</main>
+
+<footer style="margin: 0 24px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; border: 1px solid #2B2F35; border-radius: 10px; background: #16181B; padding: 12px 16px">
+<span style="font-size: 13px; color: #A2A8B0">2 transiciones cambiadas sin renderizar · solo se re-procesan esos tramos</span>
+<a href="Main.dc.html" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 20px; border-radius: 6px; background: #F0A23A; color: #0D0E10; font-weight: 700; text-decoration: none">Renderizar y ver en el reproductor</a>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { type: 1, len: 1 }; }
+  renderVals() {
+    const v0 = 40, v1 = 80, span = v1 - v0;
+    const pct = (m) => ((m - v0) / span) * 100;
+    const segs = [{ w: 12, c: '#5C6168' }, { w: 18, c: '#8E7CC3' }, { w: 26, c: '#ECECE8' }, { w: 12, c: '#3A3E45' }, { w: 22, c: '#ECECE8' }, { w: 10, c: '#5C6168' }];
+    const tr = [
+      { n: 5, s: 38.6, e: 49.5, bpm: 129, key: '10A' },
+      { n: 6, s: 48.3, e: 59.6, bpm: 130, key: '10A' },
+      { n: 7, s: 58.4, e: 69.1, bpm: 130, key: '11A' },
+      { n: 8, s: 67.9, e: 79.0, bpm: 132, key: '11A' },
+      { n: 9, s: 77.8, e: 88.3, bpm: 134, key: '12A' }
+    ];
+    const block = (t) => { const l = Math.max(0, pct(t.s)), r = Math.min(100, pct(t.e)); return { name: 'Track ' + String(t.n).padStart(2, '0'), bpm: t.bpm, key: t.key, left: l.toFixed(2), w: (r - l).toFixed(2), segs }; };
+    const laneA = tr.filter((t) => t.n % 2 === 0).map(block);
+    const laneB = tr.filter((t) => t.n % 2 === 1).map(block);
+    const trans = [[48.3, 49.5, '5→6', false], [58.4, 59.6, '6→7', true], [67.9, 69.1, '7→8', false], [77.8, 79.0, '8→9', false]].map(([s, e, label, sel]) => ({ left: (pct(s) - 1).toFixed(2), w: (pct(e) - pct(s) + 2).toFixed(2), label, bg: sel ? '#ECECE8' : '#1D2024', fg: sel ? '#0D0E10' : '#A2A8B0', bd: sel ? '#ECECE8' : '#2B2F35' }));
+    const ticks = Array.from({ length: 9 }, (_, i) => { const m = v0 + i * 5; return { left: Math.min(97, Math.max(3, pct(m))).toFixed(2), label: Math.floor(m / 60) + ':' + String(m % 60).padStart(2, '0') }; });
+    const x = (m) => (pct(m) * 10).toFixed(1);
+    const autos = [
+      { label: 'Filtro A', c: '#F0A23A', pts: `0,36 ${x(58.4)},36 ${x(59.6)},6 ${x(60)},6 ${x(60.1)},36 1000,36` },
+      { label: 'Graves A / B', c: '#3FC1D6', pts: `0,36 ${x(58.95)},36 ${x(58.97)},6 1000,6` },
+      { label: 'Volumen A', c: '#ECECE8', pts: `0,6 ${x(59.1)},6 ${x(59.6)},36 ${x(67.9)},36 ${x(68)},6 1000,6` }
+    ];
+    const typeList = [
+      ['Mezcla larga', 'Las dos pistas suenan juntas y se funden'],
+      ['Cambio de bajos', 'Sale el bajo de A, entra el de B en el compás 17'],
+      ['Corte con eco', 'A se va en eco y B entra seca'],
+      ['Barrido de filtro', 'A se cierra con filtro mientras abre B']
+    ];
+    const types = typeList.map(([name, desc], i) => ({ name, desc, bg: this.state.type === i ? '#1D2024' : 'transparent', bd: this.state.type === i ? '#ECECE8' : '#2B2F35', pick: () => this.setState({ type: i }) }));
+    const lengths = ['16 compases', '32 compases', '64 compases'].map((label, i) => ({ label, bg: this.state.len === i ? '#ECECE8' : '#16181B', fg: this.state.len === i ? '#0D0E10' : '#A2A8B0', pick: () => this.setState({ len: i }) }));
+    return { ticks, laneA, laneB, trans, autos, types, lengths };
+  }
+}
+</script>
+</body>
+</html>

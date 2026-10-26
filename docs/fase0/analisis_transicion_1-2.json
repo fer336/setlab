@@ -1,0 +1,32 @@
+{
+  "tema_a": {
+    "archivo": "1_T78_ACID.mp3",
+    "duracion_s": 439.93,
+    "bpm": 127.0,
+    "primer_tiempo_s": 0.0501,
+    "fase_compas": 0,
+    "tono": "B menor",
+    "camelot": "10A",
+    "lufs": -6.8
+  },
+  "tema_b": {
+    "archivo": "2_Boost.mp3",
+    "duracion_s": 482.35,
+    "bpm": 128.0,
+    "primer_tiempo_s": 0.0858,
+    "fase_compas": 0,
+    "tono": "A menor",
+    "camelot": "8A",
+    "lufs": -8.4
+  },
+  "plan": {
+    "bpm_mezcla": 127.0,
+    "compases": 32,
+    "inicio_mezcla_a_s": 378.003,
+    "golpe_entrada_b": 0,
+    "estiramiento_b": 0.99219,
+    "compatibilidad": "aceptable (energía sube o baja)",
+    "ajuste_fino_ms": 0.0
+  },
+  "estilo": "bajos"
+}

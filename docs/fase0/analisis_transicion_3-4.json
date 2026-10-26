@@ -1,0 +1,32 @@
+{
+  "tema_a": {
+    "archivo": "3_Hypnostate.mp3",
+    "duracion_s": 416.67,
+    "bpm": 130.0,
+    "primer_tiempo_s": 0.2645,
+    "fase_compas": 0,
+    "tono": "A menor",
+    "camelot": "8A",
+    "lufs": -7.4
+  },
+  "tema_b": {
+    "archivo": "4_SeatBelt.mp3",
+    "duracion_s": 274.23,
+    "bpm": 130.0,
+    "primer_tiempo_s": 0.0733,
+    "fase_compas": 0,
+    "tono": "A# menor",
+    "camelot": "3A",
+    "lufs": -7.2
+  },
+  "plan": {
+    "bpm_mezcla": 130.0,
+    "compases": 32,
+    "inicio_mezcla_a_s": 354.726,
+    "golpe_entrada_b": 0,
+    "estiramiento_b": 1.0,
+    "compatibilidad": "choca (conviene filtro fuerte o corte)",
+    "ajuste_fino_ms": -33.0
+  },
+  "estilo": "bajos"
+}

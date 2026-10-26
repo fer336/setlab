@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Biblioteca y nuevo set</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0D0E10}
+a{color:#ECECE8}a:hover{color:#FFFFFF}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #0D0E10; color: #ECECE8; font-family: Archivo, system-ui, sans-serif; font-size: 14px">
+
+<header style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 10px 24px; border-bottom: 1px solid #2B2F35; background: #121316">
+<div style="display: flex; align-items: center; gap: 10px">
+<svg width="30" height="20" viewBox="0 0 30 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="#F0A23A" stroke-width="2"></circle><circle cx="20" cy="10" r="8" fill="none" stroke="#3FC1D6" stroke-width="2"></circle></svg>
+<span style="font-weight: 700; letter-spacing: 0.12em; font-size: 15px">SET/LAB</span>
+</div>
+<nav aria-label="Secciones" style="display: flex; gap: 4px; flex-wrap: wrap">
+<a href="Biblioteca.dc.html" aria-current="page" style="padding: 12px 16px; border-radius: 6px; text-decoration: none; color: #ECECE8; background: #1D2024; font-weight: 600">Biblioteca</a>
+<a href="Editor.dc.html" style="padding: 12px 16px; border-radius: 6px; text-decoration: none; color: #A2A8B0; font-weight: 500">Editor</a>
+<a href="Main.dc.html" style="padding: 12px 16px; border-radius: 6px; text-decoration: none; color: #A2A8B0; font-weight: 500">Reproductor</a>
+</nav>
+<div style="flex: 1"></div>
+<span style="font-size: 13px; color: #A2A8B0">12 temas · 10 analizados</span>
+</header>
+
+<main style="padding: 20px 24px 32px; display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-start">
+
+<section style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="border: 2px dashed #2B2F35; border-radius: 10px; padding: 22px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; background: #121316">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#A2A8B0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"></path><path d="M7 9l5-5 5 5"></path><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path></svg>
+<div style="flex: 1 1 260px">
+<p style="margin: 0; font-size: 16px; font-weight: 600">Arrastrá tus temas acá</p>
+<p style="margin: 4px 0 0; font-size: 13px; color: #A2A8B0">WAV o FLAC recomendado · MP3 320 también sirve · se analizan uno por uno en segundo plano</p>
+</div>
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 6px; border: 1px solid #2B2F35; background: #1D2024; color: #ECECE8; font: inherit; font-weight: 600; cursor: pointer">Elegir archivos</button>
+</div>
+
+<div style="border: 1px solid #2B2F35; border-radius: 10px; background: #16181B; overflow: hidden">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid #2B2F35; gap: 12px; flex-wrap: wrap">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em">BIBLIOTECA</span>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #A2A8B0"><span>Buscar</span><input type="search" placeholder="Título, BPM o tono" style="min-height: 36px; width: 200px; border: 1px solid #2B2F35; border-radius: 6px; background: #0D0E10; color: #ECECE8; font: inherit; padding: 0 10px"></label>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 820px; border-collapse: collapse; font-size: 13px">
+<thead>
+<tr style="text-align: left; color: #A2A8B0; font-size: 11px; letter-spacing: 0.1em">
+<th scope="col" style="padding: 10px 16px; font-weight: 600">#</th>
+<th scope="col" style="padding: 10px 8px; font-weight: 600">TEMA</th>
+<th scope="col" style="padding: 10px 8px; font-weight: 600">BPM</th>
+<th scope="col" style="padding: 10px 8px; font-weight: 600">TONO</th>
+<th scope="col" style="padding: 10px 8px; font-weight: 600">ENERGÍA</th>
+<th scope="col" style="padding: 10px 8px; font-weight: 600">ESTRUCTURA</th>
+<th scope="col" style="padding: 10px 8px; font-weight: 600">DURACIÓN</th>
+<th scope="col" style="padding: 10px 16px; font-weight: 600">ESTADO</th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="12">
+<tr style="border-top: 1px solid #22252A">
+<td style="padding: 9px 16px; font-family: 'JetBrains Mono', monospace; color: #A2A8B0">{{r.n}}</td>
+<td style="padding: 9px 8px"><span style="font-weight: 600">{{r.name}}</span><br><span style="font-size: 12px; color: #A2A8B0">[Artista]</span></td>
+<td style="padding: 9px 8px; font-family: 'JetBrains Mono', monospace">{{r.bpm}}</td>
+<td style="padding: 9px 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; padding: 3px 7px; border-radius: 4px; background: #1D2024; border: 1px solid #2B2F35">{{r.key}}</span></td>
+<td style="padding: 9px 8px"><div style="width: 80px; height: 6px; border-radius: 3px; background: #24272C"><div style="height: 6px; border-radius: 3px; background: #ECECE8; width: {{r.energy}}%"></div></div></td>
+<td style="padding: 9px 8px"><div style="display: flex; width: 150px; height: 8px; border-radius: 2px; overflow: hidden; background: #24272C"><sc-for list="{{r.segs}}" as="s" hint-placeholder-count="6"><div style="height: 8px; width: {{s.w}}%; background: {{s.c}}"></div></sc-for></div></td>
+<td style="padding: 9px 8px; font-family: 'JetBrains Mono', monospace; color: #A2A8B0">{{r.dur}}</td>
+<td style="padding: 9px 16px"><span style="font-size: 12px; font-weight: 600; color: {{r.sc}}">{{r.status}}</span></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<aside aria-label="Nuevo set" style="flex: 1 1 320px; min-width: 0; max-width: 400px; border: 1px solid #2B2F35; border-radius: 10px; background: #16181B; padding: 18px; display: flex; flex-direction: column; gap: 16px">
+<div>
+<p style="margin: 0 0 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: #A2A8B0">NUEVO SET</p>
+<p style="margin: 0; font-size: 20px; font-weight: 700">Contale a la IA qué historia querés</p>
+</div>
+
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="font-size: 12px; font-weight: 600; margin-bottom: 8px">Duración</legend>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid #2B2F35; border-radius: 6px; overflow: hidden">
+<sc-for list="{{durs}}" as="d" hint-placeholder-count="2"><button type="button" onClick="{{d.pick}}" style="min-height: 44px; border: 0; font: inherit; font-weight: 600; cursor: pointer; background: {{d.bg}}; color: {{d.fg}}">{{d.label}}</button></sc-for>
+</div>
+<p style="margin: 8px 0 0; font-size: 12px; color: #A2A8B0">{{durNote}}</p>
+</fieldset>
+
+<div>
+<p style="margin: 0 0 8px; font-size: 12px; font-weight: 600">Género</p>
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<span style="font-size: 12px; padding: 6px 11px; border-radius: 99px; background: #ECECE8; color: #0D0E10; font-weight: 600">Techno</span>
+<span style="font-size: 12px; padding: 6px 11px; border-radius: 99px; border: 1px solid #2B2F35; color: #A2A8B0">Dark techno</span>
+<span style="font-size: 12px; padding: 6px 11px; border-radius: 99px; border: 1px solid #2B2F35; color: #A2A8B0">Minimal</span>
+<span style="font-size: 12px; padding: 6px 11px; border-radius: 99px; border: 1px solid #2B2F35; color: #A2A8B0">Tech house</span>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="nuevo-prompt" style="font-size: 12px; font-weight: 600">Prompt</label>
+<textarea id="nuevo-prompt" rows="5" style="resize: vertical; border: 1px solid #2B2F35; border-radius: 6px; background: #0D0E10; color: #ECECE8; font: inherit; font-size: 13px; line-height: 1.5; padding: 10px">Arranque hipnótico y oscuro, subida lenta, pico industrial a los 70 minutos, cierre melódico.</textarea>
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<span style="font-size: 11.5px; padding: 5px 10px; border-radius: 4px; background: #1D2024; color: #A2A8B0">+ Warm-up profundo</span>
+<span style="font-size: 11.5px; padding: 5px 10px; border-radius: 4px; background: #1D2024; color: #A2A8B0">+ Peak time sin pausa</span>
+<span style="font-size: 11.5px; padding: 5px 10px; border-radius: 4px; background: #1D2024; color: #A2A8B0">+ After oscuro</span>
+</div>
+</div>
+
+<a href="Editor.dc.html" style="min-height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 6px; background: #F0A23A; color: #0D0E10; font-weight: 700; text-decoration: none; font-size: 15px">Generar set</a>
+<p style="margin: 0; font-size: 12px; color: #A2A8B0">La IA arma el orden y las transiciones; después podés retocarlo en el Editor.</p>
+</aside>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":960}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { dur: 1 }; }
+  renderVals() {
+    const bpms = [126, 126, 127, 128, 129, 130, 130, 132, 134, 134, 131, 128];
+    const keys = ['8A', '8A', '9A', '9A', '10A', '10A', '11A', '11A', '12A', '1A', '12A', '12B'];
+    const energy = [30, 34, 40, 48, 56, 64, 70, 82, 95, 92, 70, 52];
+    const durMin = [10.6, 11.1, 10.1, 11.6, 10.9, 11.3, 10.7, 11.1, 10.5, 11.2, 10.8, 11.5];
+    const pal = { i: '#5C6168', s: '#8E7CC3', d: '#ECECE8', b: '#3A3E45' };
+    const shapes = [
+      [['i', 14], ['s', 16], ['d', 28], ['b', 12], ['d', 20], ['i', 10]],
+      [['i', 10], ['s', 20], ['d', 24], ['b', 16], ['d', 20], ['i', 10]],
+      [['i', 16], ['s', 14], ['d', 30], ['b', 10], ['d', 18], ['i', 12]]
+    ];
+    const rows = bpms.map((bpm, i) => {
+      const m = durMin[i], status = i === 10 ? 'Analizando 62%' : i === 11 ? 'En cola' : 'Analizado';
+      const done = i < 10;
+      return {
+        n: String(i + 1).padStart(2, '0'), name: 'Track ' + String(i + 1).padStart(2, '0'),
+        bpm: done ? bpm.toFixed(1) : '—', key: done ? keys[i] : '—', energy: done ? energy[i] : 0,
+        segs: done ? shapes[i % 3].map(([k, w]) => ({ w, c: pal[k] })) : [],
+        dur: Math.floor(m) + ':' + String(Math.round((m % 1) * 60)).padStart(2, '0'),
+        status, sc: i === 10 ? '#F0A23A' : i === 11 ? '#A2A8B0' : '#ECECE8'
+      };
+    });
+    const durs = ['1 hora', '2 horas'].map((label, i) => ({ label, bg: this.state.dur === i ? '#ECECE8' : '#16181B', fg: this.state.dur === i ? '#0D0E10' : '#A2A8B0', pick: () => this.setState({ dur: i }) }));
+    const durNote = this.state.dur === 1 ? 'Usa los 12 temas · 1:58 estimado' : 'La IA elige los 6–7 temas que mejor cuentan la historia';
+    return { rows, durs, durNote };
+  }
+}
+</script>
+</body>
+</html>
